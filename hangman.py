@@ -1,5 +1,5 @@
 import random
-from images import IMAGES
+from image import IMAGES
 
 word_list=["india","nepal","bhutan","china","apple","ball","dog","ear"]
 chosen_word=random.choice(word_list)
@@ -8,7 +8,7 @@ word_lenght=len(chosen_word)
 display=[]
 for i in range(word_lenght):
     display=display+list("_")
-    
+
 lives=8
 game_over=False
 while not game_over:
@@ -45,12 +45,9 @@ while not game_over:
             if letter!=guess and lives==1: 
                 print(IMAGES[7])
                 print("you lose")
-                break 
-                       
-    print(display) 
-    print() 
-
-
+                break        
+    print(display)  
+    
     if "_" not in display:
         game_over=True
-        print("you win") 
+        print("you win")  
